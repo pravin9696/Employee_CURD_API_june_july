@@ -33,5 +33,54 @@ namespace Employee_CURD_API_june_july.Controllers
             return NotFound();
 
         }
+        [HttpPost]
+        public IHttpActionResult AddEmp(tblEmployee emp)
+        {
+            dbo.tblEmployees.Add(emp);
+            if (dbo.SaveChanges()>0)
+            {
+                return Ok();
+            }
+            return BadRequest();
+        }
+        [HttpGet]
+        // provide employee object as per id 
+        public IHttpActionResult  searchEmpById(int id)
+        {
+            var emp = dbo.tblEmployees.Find(id);
+            if (emp==null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(emp);
+            }
+        }
+        [HttpPut]
+        public IHttpActionResult updateEmp(tblEmployee emp)
+        {
+            var e = dbo.tblEmployees.FirstOrDefault(x => x.id == emp.id);
+            if (e==null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                e.name = emp.name;
+                e.salary = emp.salary;
+                e.Dept = emp.Dept;
+                if (dbo.SaveChanges()>0)
+                {
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+
+        }
+
     }
 }

@@ -110,6 +110,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Site.css" />
     <Content Include="DataBase Script\DBEmployee.sql" />
     <Content Include="Global.asax" />
     <Content Include="Models\Model1.Context.tt">
@@ -129,6 +130,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EmpController.cs" />
     <Compile Include="Controllers\EmployeeAPIController.cs" />
+    <Compile Include="Controllers\TryAPIController.cs" />
+    <Compile Include="Controllers\TryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -165,6 +168,18 @@
     <Content Include="Views\Emp\ShowAllEmployee.cshtml" />
     <Content Include="Views\Emp\SearchEmpByName.cshtml" />
     <Content Include="Views\Emp\showEmps.cshtml" />
+    <Content Include="Views\Try\insertEmp.cshtml" />
+    <Content Include="Views\Try\Index.cshtml" />
+    <Content Include="Views\Try\updateEmp.cshtml" />
+    <Content Include="Views\Emp\temp.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Emp\aa.cshtml" />
+    <Content Include="Views\Shared\MyErrorPage.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Emp\Index.cshtml" />
+    <Content Include="Views\Emp\InsertEmployee.cshtml" />
+    <Content Include="Views\Emp\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
